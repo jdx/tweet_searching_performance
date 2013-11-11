@@ -11,10 +11,6 @@ RECORD_COUNT = 15000000
 
 $pg = PG.connect(dbname: 'tweet_perf')
 
-def random_word
-  Forgery(:lorem_ipsum).words(1, random: true)
-end
-
 def create_table
   $pg.exec <<-eom
   CREATE TABLE IF NOT EXISTS tweets(

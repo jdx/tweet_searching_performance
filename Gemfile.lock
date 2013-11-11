@@ -6,6 +6,16 @@ GEM
       timers (~> 1.1.0)
     coderay (1.1.0)
     connection_pool (1.0.0)
+    elasticsearch (0.4.1)
+      elasticsearch-api (= 0.4.1)
+      elasticsearch-transport (= 0.4.1)
+    elasticsearch-api (0.4.1)
+      multi_json
+    elasticsearch-transport (0.4.1)
+      faraday
+      multi_json
+    faraday (0.8.8)
+      multipart-post (~> 1.2.0)
     ffi (1.9.3)
     forgery (0.5.0)
     formatador (0.2.4)
@@ -26,6 +36,8 @@ GEM
       rb-inotify (>= 0.9)
     lumberjack (1.0.4)
     method_source (0.8.2)
+    multi_json (1.8.2)
+    multipart-post (1.2.0)
     pg (0.17.0)
     pry (0.9.12.3)
       coderay (~> 1.0)
@@ -46,6 +58,7 @@ DEPENDENCIES
   awesome_print
   celluloid
   connection_pool
+  elasticsearch
   forgery
   guard
   guard-bundler

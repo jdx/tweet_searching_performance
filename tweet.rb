@@ -5,3 +5,7 @@ class Tweet
     @body = Forgery(:lorem_ipsum).words(10, random: true)
   end
 end
+
+def random_word
+  Forgery(:lorem_ipsum).words(1, random: true)
+end

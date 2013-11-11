@@ -2,6 +2,7 @@ guard :bundler do
   watch('Gemfile')
 end
 
-guard :shell, all_on_start: true do
-  watch('postgres.rb') { |f| system("./#{f[0]}") }
+guard :shell do
+  watch('postgres.rb') { |f| system("./postgres.rb") }
+  watch('elasticsearch.rb') { |f| system("./elasticsearch.rb") }
 end
