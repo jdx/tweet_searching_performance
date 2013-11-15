@@ -8,8 +8,9 @@ require 'benchmark'
 require_relative 'tweet'
 
 $es = Elasticsearch::Client.new log: false
-num_docs = $es.indices.status["indices"]["tweets"]["docs"]["num_docs"]
-RECORD_COUNT = 5000000
+index_status = $es.indices.status["indices"]["tweets"]
+num_docs = index_status ? index_status["docs"]["num_docs"] : 0
+RECORD_COUNT = 500000
 CHUNK_SIZE = 100
 
 puts "num docs in elasticsearch: #{num_docs}"
