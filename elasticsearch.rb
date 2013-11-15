@@ -26,7 +26,7 @@ chunks.times do |i|
       index: {
         _index: 'tweets',
         _type: 'tweet',
-        id: rand(RECORD_COUNT*100),
+        _id: rand(RECORD_COUNT*100),
         data: { tweet_id: tweet.id, text: tweet.body }
       }
     }
